@@ -1,0 +1,50 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "Doom2.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MYMOD01
+	{
+		
+		resources
+		{
+			
+			resource0
+			{
+				type = 0;
+				location = "D:\\Desktop\\gzdoom-4-10-0-Windows-64bit\\DOOM2.WAD";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 0;
+			}
+			
+			
+			resource1
+			{
+				type = 1;
+				location = "D:\\Desktop\\gzdoom-4-10-0-Windows-64bit\\gzdoom_mods\\my-mod";
+				option1 = 0;
+				option2 = 0;
+				notfortesting = 1;
+			}
+			
+		}
+		
+		
+		grid
+		{
+			background = "";
+			backsource = 0;
+			backoffsetx = 0;
+			backoffsety = 0;
+			backscalex = 100;
+			backscaley = 100;
+			gridsize = 32;
+		}
+		
+	}
+	
+}
+

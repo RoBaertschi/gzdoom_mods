@@ -1,0 +1,15 @@
+cluster 1
+{
+    entertext = lookup, "E1TEXT"
+    exittext = lookup, "E1TEXT"
+}
+
+episode mymod01
+{
+    name = "Hello World"
+}
+
+DoomEdNums
+{
+    30001 = "Doomer"
+}

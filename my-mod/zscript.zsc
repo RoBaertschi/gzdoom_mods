@@ -1,0 +1,4 @@
+version "4.10.0"
+
+#include "my-mod/monsters.zsc"
+#include "my-mod/weapons.zsc"

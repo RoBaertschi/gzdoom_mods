@@ -1,0 +1,60 @@
+class Doomer : DoomWeapon
+{
+    Default
+    {
+        Weapon.SelectionOrder 1900;
+        Weapon.AmmoUse 3;
+        Weapon.AmmoGive 30;
+        Weapon.AmmoType "Granate";
+        Weapon.SlotNumber 7;
+        Obituary "$OB_MPPISTOL";
+        Inventory.PickupMessage "$PICKUP_PISTOL_DROPPED";
+        Tag "DOOMER";
+        
+        
+    }
+
+    States
+    {
+        Ready:
+            PISG A 1 A_WeaponReady;
+            loop;
+        Deselect:
+            PISG A 1 A_Lower;
+            loop;
+        Select:
+            PISG A 1 A_Raise;
+            loop;
+        Fire:
+            PISG A 4;
+            PISG B 6 A_FirePistol;
+            PISG C 4;
+            PISG B 5 A_ReFire;
+            goto Ready;
+        Flash:
+            PISF A 7 Bright A_Light1;
+            goto LightDrone;
+        Spawn:
+            PIST A -1;
+            Stop;
+    }
+}
+
+class Granate : Ammo
+{
+    Default
+    {
+        Inventory.PickupMessage "$GOTSHELLS";
+        Inventory.Amount 6;
+        Inventory.MaxAmount 300;
+        Ammo.BackpackAmount 16;
+        Ammo.BackpackMaxAmount 900;
+        Inventory.Icon "SHELA0";
+    }
+    States
+    {
+        Spawn:
+            SHEL A -1;
+            stop;
+    }
+}
